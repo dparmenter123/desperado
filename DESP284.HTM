@@ -1,0 +1,322 @@
+<html>
+<title>all browsers all the time</title>
+<body>
+<pre>
+From:   DECPA::"desperado@world.std.com" "MAIL-11 Daemon" 15-AUG-1995 18:10:53.10
+To:     desperado@world.std.com
+Subj:   all browsers all the time
+
+ Here's the deal.  I shoot my half-baked opinions about this and that
+ out to the world and I get other opinions, some fully baked, back.  I
+ then bundle all the more interesting opinions into one message that
+ you can delete without reading if you care nothing for, in this case,
+ browsers, whereupon you won't know what's going on.  Read on and you
+ will know more, at least about NetScape, than I did, and, at the end,
+ a pointer to another browser, besides the Quarterdeck one I am
+ fiddling with.
+
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                             NETSCAPE EASTER EGGS
+
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: nelson@crynwr.com (Russell Nelson)
+To: desperado@world.std.com
+
+   From: tompar@world.std.com (Tom Parmenter)
+
+    I wonder what easter eggs are in Netscape?
+
+Well, if you look in the Netscape executable, you find a whole bunch
+of easter-eggish URLs (below), all of which get appended to
+http://home.netscape.com/people/ except &lt;about:yomama&gt;.  :)
+
+about:ari
+about:atotic
+about:blythe
+about:chouck
+about:dmose
+about:ebina
+about:hagan
+about:jeff
+about:jg
+about:jwz
+about:kipp
+about:marca
+about:mlm
+about:montulli
+about:mtoy
+about:paquin
+about:robm
+about:sharoni
+about:sk
+about:timm
+
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                          NETSCAPE STRATEGY REVEALED
+
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: Marc Goodman &lt;goodman@cs.brandeis.edu&gt;
+Subject: Why Netscape is winning
+To: desperado@world.std.com
+
+Tom,
+
+Glad to see desperado is back.  I was starting to suffer from a
+pith-shortage.
+
+Your comments about Netscape finally pushed me over the edge, forcing
+me to break lurker mode.  First, I'd like to list the reasons why I
+think Netscape is capturing the browser market (and from recent stats
+I've seen, something like 90% of the people browsing the web are doing
+so via Netscape).  Next, I'll explain what I've heard about Netscape's
+``corporate strategy,'' and why I think it's probably a win.  Finally,
+I'll offer a few opinions about Mozilla (the Netscape browser),
+Trumpet Winsock, Windows, and the notion of a universal,
+self-installing browser.  I'm offering these comments from the
+perspective of a web-developer who is unaffiliated with Netscape,
+Inc.
+
+o Why Netscape is capturing the browser market
+
+There are two aspects to this issue.  The first aspect is the
+perception of speed due to Netscape's incremental display of HTML.
+An HTML document consists of a bunch of text intermixed with markup
+tags.  Some of these markup tags refer to non-text objects (especially
+pictures which are to be displayed in the document).  Formatting and
+displaying the text requires the browser to figure out the size and
+location of these objects.
+
+Two ways of formatting this output are: 1). start at the begining of
+the document, format text until you get to a picture, download the
+picture, place the picture, and continue formatting the rest of the
+document, or 2). do a pass through the text, read only enough header
+information from the pictures to figure out how big they are and where
+they should be placed, format all of the text, then go back and read
+in and place the pictures.
+
+Both methods require roughly the same amount of work to fully display
+an HTML document.  However, downloading text is cheap (wow, a
+character is only 1 byte, how's that for a bargain?) and downloading
+pictures is expensive.  The result is that a browser that formats and
+displays the text first will present the user with a lot of
+information in a relatively short time.  Whereas, a browser that
+formats the text in one pass will display some information, go away
+for a god-awfully-long time, display a picture and some more text, and
+generally lurch along in an unpleasant manner.
+
+Further, many pictures (interlaced GIFs) can be displayed
+incrementally.  The browser paints the entire picture with big, blocky
+pixels, then repaints the picture with smaller pixels, then with
+smaller pixels, etc. as more data is read.  If you already have the
+text, and you don't care about the detail on the picture, you can
+abort your download and happily surf to the next document with a
+minimum of hair-pulling.
+
+A browser that incrementally displays an HTML document will *appear*
+to be much faster than a non-incremental browser.  Mozilla was the
+first browser to support full incremental display, and most of the
+early netsurfers migrated to Mozilla because of this.
+
+OK, so now you have a bunch of people who are using your browser, how
+do you keep them from switching to a freeware product when the
+freeware product gets around to incorporating incremental update as
+well?  Answer: You introduce a lot of new markup tags that aren't part
+of the formal HTML specification.  If you're clever, you choose ones
+that people really want to use like centering things on the screen
+(hard to believe it's not in the original spec, isn't it?) and tables.
+If you're an evil bastard, you choose ones that are slow irritating
+eyesores that people really want to use like colorful backgrounds,
+server-side pushs (which allow sloooooooooow animations), and (arg)
+blinking text.  You can also extend the syntax for existing markup
+tags to allow things like scaling of pictures.  Since you don't
+document these extensions until AFTER your latest beta version of the
+browser supports them, everyone else in the browser biz is always
+playing catch-up.
+
+HTML authors now have the choice of: 1). only using the boring old
+markup tags that are supported by the slow clunky freeware browsers
+that only 10% of the market are using anyway, 2). creating two
+versions of all of their documents so that both types of browsers are
+supported, or 3). including all these nifty tags in their documents
+and saying ``If this page looks funny to you, you're not using &lt;a
+href="http://home.mcom.com"&gt;Netscape&lt;/a&gt;.''
+
+Turn to the dark side of the force, Luke.
+
+Now when all of those poor (l)users without Netscape look at one of
+those pages, it looks really, really bad.  And, often, they're just a
+click away from being able to download Mozilla.  Cool marketing
+gimmic, eh?
+
+I imagine that eventually Netscape will run out of useful new tags to
+add to the HTML spec.  At that point, their edge will evaporate.
+But, this probably won't happen for years, and by then no one will
+even bother trying to compete.
+
+This is why I think Netscape is winning the browser market.
+
+o Netscape's corporate strategy and why it's probably a win
+
+Oddly enough, Netscape isn't planning on getting rich from the browser
+market.  They're planning on getting rich from the server market.
+Here's how they just might be able to do it.
+
+First a little technical handwaving.  A hypertext link has a URL
+(universal resource locator) associated with it.  The URL specifies
+how to fetch the resource, what host machine provides the resource,
+and where the host should look for the resource.  When you click on a
+hypertext link (or press a button in a form) your browser opens a
+connection to an HTTP server running on the host machine and sends the
+URL to that server.  Then, the server interprets the URL, fetches the
+appropriate resource, and ships it back to your browser.
+
+Given that there are already a bunch of not-bad freeware servers (I'm
+running a CERN server at my site, for example), why would anyone in
+their right mind spend 4-5K (!!) for a Netscape server?  There are two
+reasons, one not-so-important one and one killer.  First, the
+not-so-important reason: speed.  The Netscape server is supposed to be
+very fast.  If you're a big site and you're getting tens of thousands
+of hits per day, you want a server that's not going to load your
+system.  But, CERN httpd or NCSA httpd are fast enough for most sites,
+so I don't think that's a real killer.
+
+The real killer is secure transactions.  If you're a business and you
+want to sell things over the net, you probably want customers to give
+you their credit card numbers.  Now we all know that with the
+gigabytes of information floating over the net on a daily basis the
+odds of someone sniffing out that one tiny packet with your credit
+card number in it are pretty managable.  But, your average consumer,
+who doesn't know doodly squat about computers, can easily be persuaded
+that this danger is HUGE AND TERRIFYING and that if the
+anarchosyndicalists get ahold of your credit card number, you might as
+well kiss the dog, wife, house and kids goodbye and book a one-way
+ticket to skid-row.
+
+So, if you want consumers to give you their credit card numbers, you
+have to be able to assure them that those pesky anarchosyndicalists
+won't be sniffing out their credit card numbers.  One way of doing
+that is via encoded (and, therefore, presumably secure) transactions,
+preferably with something really strikingly graphic like a BIG BLUE
+LINE across the top and bottom of a secure HTML document and like a
+little KEY icon or something that's displayed ALL the time at the
+bottom of the browser window and it's always broken unless you're in a
+secure transaction and then it's a WHOLE key in a bright blue box.
+Boy, you KNOW you're safe when you get that WHOLE KEY thing.  Ahem.
+
+So, let's reason it out.  Mozilla, the Netscape browser, supports
+secure transactions when transacting with a Netscape Secure Server.
+Presumably, the protocols for these communications are
+Netscape-proprietary, so they can't be engineered into the freeware
+servers.  Next, you know that 90% of everyone and his mother are
+using Mozilla.  Finally, you know that no one is going to buy anything
+&gt;from you over the net unless your server will engage in secure
+communications with their browser.  It doesn't take an Einstein to
+figure out what server you want to be running if you want to do
+business over the web.
+
+And, by the transitive property of perversity, if you're using a
+non-Netscape browser and you want to buy something over the net, and
+all of the businesses are running Netscape Secure Servers, you
+probably go click click and run Mozilla yourself.
+
+So, this is why I think Netscape's corporate strategy is probably a
+win.
+
+o Gee, but you have to do all this black magic with Trumpet Winsock
+and such if you want to run Mozilla, and why can't someone just sell
+me something that I don't have to be a black magician to install?
+
+I've installed TIA, Trumpet Winsock, Netscape, and a lot of other
+Internet apps on PCs, and MacTCP, MacPPP, InterSlip, Netscape and a
+lot of other Internet apps on Macs, and I can tell you:
+
+Blame the Internet Service Providers.
+
+(or, alternatively, Blame the TCP/IP RFCs).
+
+Netscape allows you to send mail, so if you want to send mail with
+Netscape then Netscape needs to know what machine is running your mail
+server (all those mumbles about a POPer and smail).  Netscape also
+allows you to read newsgroups, so if you want to read news with
+Netscape then Netscape needs to know what machine is running your news
+server (the mumbles about NNTP).  Getting TCP/IP working requires that
+you either have a PPP or SLIP (or ethernet) connection to a host
+machine (the mumbles about Trumpet Winsock, Microsloth Network, and
+TIA).  Your TCP/IP stack also needs to know about your IP address and
+where the server is for domain name lookup.
+
+These are all different (and often in non-obvious ways) for different
+internet service providers (ISPs).  So, your universal network thingie either
+needs to know about all of the different ways that the ISPs have their
+systems set up, or all of your ISPs need to be set up the same way.
+Eventually, market pressures will force the ISPs to standardize, and
+internetting a box will be a no-brainer.  Until then, there will be no
+universal network thingie.
+
+o Back to lurk mode.  Thanks again for a great list.
+
+-Marc
+---------------------------------------------------------
+http://www.continuumsi.com/~marc/main.html
+mailto:marc@continuumsi.com
+
+                                  =*=
+
+To: desperado@world.std.com
+From: "Dragon(David Fiedler)" &lt;david@infopro.infopro.com&gt;
+
+Tom Parmenter writes:
+&gt;
+&gt;  I celebrated the metastasis of Netscape by downloading the
+&gt;  Quarterdeck Internet Suite (http://www.qdeck.com), which promises
+&gt;  superior features to what they call "the blinking browser",
+&gt;  particularly in URL management.
+
+Sod that, check this one out: http://www.twg.com for Emissary, and it
+should make you faint if you can get past the occasional crashes...
+&gt;
+&gt;  To install Netscape I had to acquire Netscape, Trumpet Winsock,
+&gt;  TIA, and four "helper"utilities and then engage a guru to link
+&gt;  them all together.  This is not a three-billion-dollar product, it is
+&gt;  a rinky-dink app that can't stand alone for a second.  Of course, to
+&gt;  install the Quarterdeck Suite I need to find out something about a
+&gt;  bunch of stuff I have only vaguely heard of, my "servers": POP, SMTP
+&gt;  and NNTP, and plug 'em in to an installation procedure that tells me
+&gt;  nothing about any of these things.
+
+Hmm. Look around for Slipknot; it's a stand-alone browser with a TIA-like
+thing and a stack built in. Just dial up your service provider and go.
+
+&gt;  Scott Adams, victim of the one-man economy layoff, posts his
+&gt;  address of scottadams@aol.com in every Sunday strip.  I personally am
+&gt;  boycotting all Pacific Bell products.
+
+Easy for you to say, aren't you in Massachusetts?
+--
+     David Fiedler  david@mecklermedia.com
+    Editor-in-Chief, Web Developer Magazine
+  http://www.mecklerweb.com/mags/wd/wdhome.htm
+PO Box 220, Rescue CA 95672 Phone: 916/677-5870
+
+                                  =*=
+
+ Now, wasn't that cool?
+
+ Yr. bdy,
+ Tom Parmenter
+
+                                 xxx
+
+ Digital technology is the universal solvent of intellectual property rights
+                  Forward  with  daring  and  whimsy
+                    Copyright 1995, Tom Parmenter
+
+                                [\|/]
+                                [/|\]
+</pre>
+</body>
+</html>

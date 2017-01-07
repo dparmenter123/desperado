@@ -1,0 +1,655 @@
+<html>
+<title>Desperado #2006: Title IV, United States Code, Section 1030</title>
+<body>
+<pre>
+From:   COVERT::COVERT "John R. Covert  18-Jan-1989 1025" 18-JAN-1989 08:33:55.12
+To:     @DESPERADO
+Subj:   Desperado #2006:  Title IV, United States Code, Section 1030
+
+ @.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$
+
+ DESPERADO,  Defines the crime of computer intrusion ('hacking')
+
+ @.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$
+------------------------------------------------------------------------------
+CONTRIBUTIONS:  CLOSET::T_PARMENTER
+                [t_parmenter%closet@decwrl.dec.com]
+
+SUBSCRIPTIONS:  COVERT::DESPERADO-REQUEST
+                [desperado-request%covert@decwrl.dec.com
+------------------------------------------------------------------------------
+
+    I've just this week been victimized by a virus, along with thousands
+    and thousands of my fellow Digits and it ain't no fun.  Bummer, in
+    fact.  I had already been planning to type in this article, but this
+    week's misadventure makes it all the more pressing.
+
+    The following was absorbed without permission from The Washington
+    Monthly, January 1989.  It is often the case that this mag has a better
+    idea of what is going on than the New York Times, CBS, and the
+    McLaughlin Report put together.  That's strange, because all those
+    people read it.
+
+    Here's what they had to say about viruses.  This might be one to clip
+    and pass on to your Mom and Dad when they ask you, "Daughter, what do
+    you know about these terrible virus things?"
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                            REVENGE OF THE NERDS
+
+                    The real problem with computer viruses
+                isn't genius programmers, it's careless ones
+
+                             by Nicholas Martin
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+       It was with admiration rarely applied to saboteurs that the media
+       presented us Robert T. Morris Jr., the 23-year-old "whiz" who
+       brought the 60,000-computer Advanced Research Projects Agency
+       network (Arpanet) to a halt in November.  _Time_ called Morris's
+       creation "one of the most sophisticated and infectious computer
+       viruses the world has yet seen."  _The_New_York_Times_ referred to
+       Morris's virus as a "programming tour de force," and quoted, without
+       comment, one Harvard graduate student's analogy that, "It's as if
+       Mathias Rust had not just flown into Red Square, but built himself a
+       stealth bomber by hand and then flown into Red Square."
+
+       Morris fit - or was made to fit - the image of the Diabolical
+       Supergenius Computer Nerd:  Glasses.  Frequent late-night sessions
+       with the computer terminal.  Slightly crazed look.  He probably
+       learned to read at age 32 and was doing calculus in seventh grade.
+       His teachers all called him "brilliant" but bored with normal
+       adolescent preoccupations and unchallenged by school work, he was
+       drawn to the one deed that required all fo his staggering
+       intellectual proowess: breaking into the most powerful computer
+       system on earth.  Or something like that.  In the movies we usually
+       end up at DefCon Two.
+
+       Of course, many people in the computer business only helped
+       encourage the notion that it took a one-in-a-million genius to pick
+       this lock.  A group of programmers working to counteract Morris's
+       program told the _Times_ they were "impressed with its power and
+       cleverness."  But then again, they would look sort of silly being
+       outsmarted by your generic computer-literate 23-year-old.
+
+       In fact, a great deal of what Morris did was frightningly simple. As
+       Eugene Spafford, a Purdue comp0uter science professor, wrote in a
+       recent technical report on Morris's program, "The [program] was
+       apparently . . . done by someone clever but not particularly gifted.
+       In general, [it] is not that impressive and its 'success' was
+       probably due to a large amount of luck rather than any programming
+       skills possessed by the author."  Morris didn't pick the lock to the
+       Arpanet computers, so much as find the key someone had left under
+       the mat.  Or as it turned out, on top of it.
+
+       THE KEY ON THE MAT
+
+       The computers Morris invaded were part of the Arpanet, an
+       international grid of telephone lines, buried cables, and satellite
+       hookups established by the Department of Defense in 1969.  It
+       connects 60,000 computers owned by universities, private research
+       companies, and the federal government.  Users routinely share
+       information on topics as diverse as the Strategic Defense Initiative
+       (unclassified material only), Shakespeare, and - yes, some parts of
+       the hacker stereotype are true - recent episodes of Star Trek.  It's
+       much like whnen the rest of us mail letters - except that the
+       network's split-second speed definitely beats the U.S. Postal
+       Service.
+
+       On the evening of November 2, Morris used his terminal to introduce
+       a computer program into an Massachusetts Institute of Technology
+       computer.  (He apparently chose MIT to throw detectives off his
+       trail.)  The key to his success was finding a security flaw in
+       "Berkeley Unix," the "operating system" or basic software, used by
+       many of the network's computers.  Morris's program - a "worm" as
+       computer cops call this type of program - didn't exactly defeat the
+       security systems on the 6,000 Arpanet computers it infected (about
+       10 percent of the computers on the network); it just ignored them.
+
+       His program made use of a simple "mail" service, a convenience
+       provided with most operating systems that allows one user to send a
+       message to another.  (In Los Angeles, Rodgers types in his idea for
+       a new musical, and whoosh, off it goes to Hammerstein in Manhattan.)
+       The Unix package came with such a program called "Sendmail."  But
+       computer programmers are as fond of optional extras as car buyers,
+       and in this case the optoins made it just a bit too user friendly.
+       Eric Allman, the Berkeley graduate student who wrote Sendmail,
+       included a feature so people could mail messages not just to other
+       people but also to other computer programs.  All Morris did was to
+       notice that if you could send a message (which is simply a
+       collection of letters, numbers, and punctuation) to a program, then
+       you could send a _second_program_ (which is also just letters,
+       numbers, and punctuation) to the first program.  From there it was
+       simply a matter of Morris sending his instructions forth to be
+       fruitful and multiply.
+
+       There are many different types of programs.  Some make calculations,
+       some organize data - and some start up or give birth to other
+       programs.  By mailing his worm to one of these surrogate mother
+       programs, Morris ensured that it would get copied and sent forth to
+       infect otyher computers.  His program still couldn't delete other
+       people's files - not at this stage anyway - but it enabled him to
+       run a program on someone else's computer, something Unix security
+       systems were supposed to control  Once there, Morris's program let
+       loose with all sorts of requests:  it searched the system for other
+       computers to call up and infect; it broke into higher security
+       areas; and it sent an announcement of its "birth" to a computer in
+       Berkeley (apparently another effort to shake off computer
+       detectives).  After a while, the programs demaded so much time and
+       memory from the computers that the computers broke down, or, in the
+       jargon, "crashed."
+
+       To actually delete data, Morris's chain-letter-from-hell had to
+       give secret passwords that would get it past key checkpoints.  It
+       did.  By what ingenious method?  It guessed.  Using a list of 400
+       common English words, Morris's program guessed right in at least 12
+       cases at Cornell alone.  This is one case where human qualities like
+       impatience and skepticism might have served the computer well.
+       Imagine the husky soldier at the guardhouse waitning for an hour as
+       a frantic visitor guesses incorrect passwords - and then letting him
+       go by wehen finally hits the right one.  Sure, it's a hassle to
+       memorize a gibberish password.  But it displays a certain disregard
+       for security - not to mention a lack of imagination - that
+       programmers who know how easy it is to break simple passwords would
+       use codes like "Mozart" or "Princeton" to protect their files.  It's
+       the rough equivalent of using "Open Sesame" to get itno SAC
+       headquarters.
+
+       SHARING VULNERABILITIES
+
+       Why was security so lax?  Quite simply, because computer designers
+       get careless.  Allman says he put the hole in Sendmail because it
+       made it easier for him to test the program, and no one bothered to
+       remove it before the final product was shipped.  Some people have
+       suggested the hole remained open because it made it simpler for
+       those in the know to get in.  We should remember these programs are
+       not exactly developed in top secret silos 600 feet underground.
+       Berkely Unix, like many big programs written for multi-user
+       computers, was partially developed at a university, with little
+       faculty supervision.  It was written "basically [by] grad students,"
+       Allman says.  Allman himself wasn't even officially assigned to the
+       Unix project when he wrote Sendmail.  "I did it in my spare time
+       ...," he says, "Just as a lark - some lark."  In case something does
+       go wrong though, Berkeley Unix carries a disclaimer which explains
+       that "this software is supplied 'as is' without express or implied
+       warranty."  This is about as reassuring as a security team that
+       turns off the alarms because it doesn't like the noise, while
+       disclaiming responsibility for break-ins.
+
+       This attitude may explain why so many important computers have
+       already been infiltrated.  In August 1982, Ken Thompson of Bell Labs
+       also broke into the Arpanet system.  "I picked at it for two or
+       three days and I got into it," he told _Smithsonian_ magazine.
+       "Then all the other systems fell."  Two or three days isn't very
+       long to compromise security on a major network.  And if you think
+       O-rings are the only potential problems for spacecraft, consider
+       that intruders used Arpanet to break into the Jet Propulsion Lab in
+       Pasadena three times in two years.  After a break-in in June, the
+       _Los_Angeles_Times wrote, "Officials worried that an intruder could
+       learn 'how to send bogus commands to the [eight] spacecraft the
+       laboratory controls.'"
+
+       Yet so far those in charge of protecting the nation's important
+       computers have been blase.  In 1982, using a technique as simple as
+       Morris's but harder to protect against, a group of Berkeley
+       undergraduates discovered a flaw in Unix that allowed them to break
+       into the school's computer system.  Experts at the Stanford Research
+       Institute called it "the most serious computer security problem"
+       they had encountered.  They alerted the National Security Agency,
+       which at the time was charged with setting security standards for
+       the nation's computers.  But the solution involved costly hardware,
+       and even though these are usually the magic words for a military
+       agency, the NSA said no.  "I share [Stanford's] geneeral concern for
+       the lack of security in computer systems," said Colonel Roger
+       Schell, then deputy director of NSA's computer security evaluation
+       center, "But this is just one of numerous sorts of concerns."
+       (Translation:  We can't solve this problem because there are too
+       many problems like it.)  His solution?  "Although we are generally
+       comitted to sharing informtion, we would not share vulnerabilities."
+       (Translation:  Don't worry.  We won't _tell_ saboteurs that our
+       systems are vulnerable.)
+
+       But don't think the Pentagon has left its own computers completely
+       defenseless.  In the 1970s it set up "tiger teams" to try to steal
+       sensitive information from Defense Department computers.  The teams
+       invariably were able to get whate4ver they wanted.  The Pentagon's
+       response:  abolish the tiger teams.  When asked if a virus like
+       Morris's could have infected classified computers, army Colonel
+       Thomas M. Herrick, a senior officer at the Defense Communications
+       Agency, said "Absolutely not."  Others in the Pentagon didn't share
+       his optimism.  Several weeks later the Pentagon abruptly
+       disconnected Milnet, an _un_classified military network, from
+       Arpanet because a defense contractor's computers had in recent
+       months been violated several times.
+
+       The stereotype of the computer genius is so strong that it's
+       difficult for us to believe that the problem is negligence.
+       Reporters, like most people, place great faith in scientists and
+       their unfathomable ways.  That faith is understandable, but it could
+       stand a little tempering.
+
+       What's more appalling is the sheer indifference of so many
+       programmers, who know there's a problem, but won't sound the alarms.
+       There may be no perfectly secure system, but that doesn't justify or
+       explain shoddy quality control.  And apathetic programmers can make
+       expensive solutions like NSA's proposed anti-virus coordination
+       center (replete with beeper-carrying "response teams") irrelevant.
+
+       After the Morris incident many of them just circled the wagons.  Tom
+       Knight [Hi there, Tom], a professor of computer science at MIT, told
+       _The_Washington_Post_, "The job of a university is to distribvute
+       information, not to keep it secret."  But the fact is that MIT's
+       libraries aren't open to everyone who can read.  There's no reason
+       why its computers should be open to everyone who can program.
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+_The_Washington_Monthly_ is absolutely the best public-affairs magazine in
+America.  It's exciting, informative, thoughtful, and funny.  Subscriptions
+are available at reasonable rates of $33 (frequently discounted) from The
+Washington Monthly, Subscriptions, 1611 Connecticut Ave., Washington, DC
+20009.
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                                ENTENDREVILLE
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Perhaps the most Xmassy of Xmas scenes this year:  Grace Jones, silver
+caped, silver capped, chest encased in a chrome-plated variation of the
+imitation lady's rubber bosom favored by transvestites, singing "The
+Little Drummer Boy" on Pee-Wee Herman's Xmas Special.  She arrived in a
+rocket, without drum, and left the same way.
+
+Pee-Wee was thrilled.
+
+                                    =*=
+
+Looking ahead to the new year, the Fox Network's probing news series, "A
+Current Affair", presented a special report on Swimwear 1989:  "Bathing
+suits this year will be colorful, sexy, and smart, with a lot of emphasis
+on the bustline."
+
+Not like last year, when, as you recall, swimsuits were ill-trimmed gray
+bags that emphasized the thumbs.
+
+Grace Jones is ready for the beach!
+
+                                    =*=
+
+And then, this snippet of near-reality from somewhere in the steaming swamp
+of cable TV.  I was flipping across the channels when there I saw five fat
+men in mustaches seated in a circle.  Said one, "Is this the Hall of Fame?
+Or, who stole all the K-Y Jelly?"  Came the response, "If we did that, it
+would turn the Hall of Fame into a warehouse!"  Then, the apparent
+moderator, "That's all we have time for now.  Hall of Fame entrants will be
+announced sometime in mid-January."
+
+I can hardly wait, but I know not what for.
+
+                                    =*=
+
+From a recent memo about company expenses:
+
+"Company purchased meals should be eliminated at meetings."
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                            ZEROING IN ON NOTHING
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Quoted from some document somewhere:
+
+"For example, in this system, there can be *no* default values for any
+'measurement' item.  This is because the units of any measurement item is
+determined by the 'units-per-measurement' item of the 'measurement-units'
+item.  So, if we were to give a measurement item a default value, the item
+would get the default's value, but said value would be semantically
+processed in whatever units the file was currently working in -- thus, the
+default value would be essentially random!  [Note:  the exeception is a
+default value of zero, which remains zero in any unit system.]"
+
+What I like best:  the "for example", "so", and "thus" that give this an
+atmosphere of rationality.  So, thus, for example, set your defaults to
+zero and avoid the rush.
+
+                                    =*=
+
+I read the following tip in a five-year-old copy of Boy's Life:
+
+"Programmers are often advised to remove REM statements to shorten their
+programs.  This is not a good idea because GOTOs and GOSUBs frequently
+point to REM statements and your program wouldn't work if you took all the
+REM statements out."
+
+Absolutely, Dr. Kemeney.  Positively, Dr. Kurtz.
+
+                                    =*=
+
+From:   HILLST::KAISER
+To:     CLOSET::T_PARMENTER,KAISER
+CC:
+Subj:   Expanding one's WHAT?
+
+Desparadoi will sympathize with the omission of the author's name from this
+passage, since he works for Digital:
+
+        I expanded the size of my family by another male member.
+
+An open marriage, no doubt.  Or did he mean ... no, he couldn't have meant THAT!
+
+---Pete
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+The Newton Police Department has a memorial stone in front of HQ inscribed
+"To Our Departed Members".
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                    WIND-CHILL FACTOR CONSIDERED HARMFUL
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+It was 52 degrees in Boston the other day.  In fact, two vees of geese were
+seen flying north.  On the radio, "It's 52 degrees Farenheit.  With the
+wind, that brings it down to 36."  No, it doesn't.  52 with wind is nothing
+like 36 without wind, even though it might seem the same to a warm steel
+cube with temperature sensors all over it.  Mankind has not benefited from
+the wind-chill-factor concept.  All it tells us is that it seems colder
+when the wind blows.  (There's a summer equivalent, the comfort index, that
+tells us that it ain't the heat, it's the humidity.)
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                            GO GO GUYS GET GOOFY
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From:   PIXEL::HAINSWORTH   "This sentence contains two error."
+To:     CLOSET::T_PARMENTER
+CC:     HAINSWORTH
+Subj:   Job description of the week...
+
+From:   DECWRL::"gpk@physics.att.com"
+To:     arpa!pixel.dec.com!hainsworth
+CC:
+Subj:   Stuffed Pig's Feet
+
+...
+
+She's is still pursuing a job at AT&amp;T which is a manufacturing SWAT team:
+(Scene: A typical AT&amp;T manufacturing plant in Atlanta, GA.  Workers are
+carrying around circut boards for a 5ESS switching system, and singing as
+they plow the furrows   *CUT*
+
+...Workers are carrying circuit boards from one station of a manufacturing
+plant to another, and worrying about whether AT&amp;T Microelectronics will be
+put to sleep in 1991.   Sunlight slants in through the windows. Suddenly,
+the windows are shattered by a burst of machine gun fire which (as an
+artistic touch) turns a robin which was singing in the window (as it plows
+the furrows) into chicken soup.
+
+Panic strikes, and several managers insert themselves into a disk drive
+assembly.  The door slams open, and two figures slowly walk in, outlined
+against the morning sun, briefcases and machine guns in hand. "Don't worry,
+we're manufacturing engineers, we're here to help."
+
+                                    =*=
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From:   DECWRL::"jo@STONY-BROOK.SCRC.Symbolics.COM"
+To:     parmenter@STONY-BROOK.SCRC.Symbolics.COM
+CC:
+Subj:   The Greeks had a word for it
+
+Casual readers of Tuesday's Boston Globe -- you know who you are --
+missed a wonderful caption at the bottom of page one.  Illustrating an
+otherwise insipid article entitled "Scholar says Homer inspired Greek
+ABCs" was a picture of a rock decorated with Greek characters.  The
+caption was:
+
+    An early example of Greek alphabetic writing is homosexual graffiti
+    carved into a boulder on the Greek island of Thera around 730 BC.
+    Reading from right, inscription A states:  "Laqudidas is swell."  Verse
+    B says:  "Eumelos is best in the dance."  And C translates:  "But
+    Krimon, best in the `whanger bop,' has warmed the heart of Simias."
+
+Krimon and Simias, we salute you!  Your whanger bop skill and admiration
+for same, respectively, have survived across the miles and eons.
+
+                                    =*=
+
+From:   DECWRL::"jo@STONY-BROOK.SCRC.Symbolics.COM"
+To:     parmenter@STONY-BROOK.SCRC.Symbolics.COM
+Subj:   Quote du jour
+
+"It's Marketing's baby, but they'd like us to change the diaper and feed
+it."
+
+                                    =*=
+
+From:   NEMO::STRAPHANGER
+To:     CLOSET::T_PARMENTER
+Subj:   faye not wray
+
+Under the headline, "Dunaway tries to reinvent her image"
+
+The actress atrributed some of her newfound peace of mind to her growing
+interest in religion.  "My son is baptized, but there's a lot more work that
+has to be done before I can convert to Catholicism . . . I don't believe in
+God."
+
+                                    =*=
+
+From:   ISWS::VHAMBURGER "Vic Hamburger"
+To:     @MROMGRS
+Subj:   Interesting thoughts on what you can buy for a buck (or more)
+
+&gt;&gt;&gt;Many header mail messages deleted here!
+
+Subj:   What to do with a billion dollars
+
+          DEC's $1B stock repurchase - writer Fram suggests there were
+          other ways they could have spent the money.   DEC has the cash,
+          which its recent $1B stock repurchase demonstrates.  That cash
+          could have been used in several different ways to achieve market
+          dominance.  Some alternative uses of the $1B follow:
+
+               DEC could have purchased Sun for slightly more than $1B.
+               Closing Sun would have resulted in a 50 point increase in
+               DEC stock, compared to the 5 point increase of the
+               repurchase.
+
+               DEC could have purchased a considerable portion of the pc
+               distribution channel.  Established buying patterns may lock
+               DEC out of relationships with major chains, which a major
+               purchase could have rectified.
+
+               DEC could have purchased the entire LAN industry, achieving
+               dominance in networking through the acquisition of Novell.
+               DEC's networking efforts have been more dumb terminal
+               related than pc related, despite DEC's goal of networking
+               pcs.  LAN distribution channels are also firmly established,
+               and corporate information centers have strong ties with
+               existing LAN dealers, which may shut DEC salespeople out.
+
+               DEC could have purchased Apollo with cash to spare to
+               acquire Apollo's accounts.
+
+          (PCWeek,12/5/88,p59)
+
+                                    =*=
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                ANOTHER LINGERING LOOK AT COMPUTER VANDALISM
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From:   To:@LMSB,RON,KEVIN,MATT,MARK,DAVE_L           5-JAN-1989 20:21
+To:     FROM:DRAPER
+CC:
+Subj:   an amusing anecdote from comp.risks
+
+------------------------------
+
+Date: 21 Dec 1988 1349-PST (Wednesday)
+From: horning@src.dec.com (Jim Horning)
+Newsgroups: rec.humor.funny
+Subject: Viruses and System Security (a story) [by Dave Platt]
+Date: 20 Dec 88 00:30:03 GMT
+Sender: funny@looking.UUCP
+Reply-Path: watmath!uunet!arthur.cs.purdue.edu!bee
+Also-Submitted-To-RISKS-by: From: Mark Brader &lt;msb@sq.sq.com&gt;
+
+The following story was posted in news.sysadmin recently.
+
+The more things change, the more they stay the same...
+
+Back in the mid-1970s, several of the system support staff at Motorola
+(I believe it was) discovered a relatively simple way to crack system
+security on the Xerox CP-V timesharing system (or it may have been
+CP-V's predecessor UTS).  Through a simple programming strategy, it was
+possible for a user program to trick the system into running a portion
+of the program in "master mode" (supervisor state), in which memory
+protection does not apply.  The program could then poke a large value
+into its "privilege level" byte (normally write-protected) and could
+then proceed to bypass all levels of security within the file-management
+system, patch the system monitor, and do numerous other interesting
+things.  In short, the barn door was wide open.
+
+Motorola quite properly reported this problem to XEROX via an official
+"level 1 SIDR" (a bug report with a perceived urgency of "needs to be
+fixed yesterday").  Because the text of each SIDR was entered into a
+database that could be viewed by quite a number of people, Motorola
+followed the approved procedure: they simply reported the problem as
+"Security SIDR", and attached all of the necessary documentation,
+ways-to-reproduce, etc. separately.
+
+Xerox apparently sat on the problem... they either didn't acknowledge
+the severity of the problem, or didn't assign the necessary
+operating-system-staff resources to develop and distribute an official
+patch.
+
+Time passed (months, as I recall).  The Motorola guys pestered their
+Xerox field-support rep, to no avail.  Finally they decided to take
+Direct Action, to demonstrate to Xerox management just how easily the
+system could be cracked, and just how thoroughly the system security
+systems could be subverted.
+
+They dug around through the operating-system listings, and devised a
+thoroughly devilish set of patches.  These patches were then
+incorporated into a pair of programs called Robin Hood and Friar Tuck.
+Robin Hood and Friar Tuck were designed to run as "ghost jobs" (daemons,
+in Unix terminology);  they would use the existing loophole to subvert
+system security, install the necessary patches, and then keep an eye on
+one another's statuses in order to keep the system operator (in effect,
+the superuser) from aborting them.
+
+So... one day, the system operator on the main CP-V software-development
+system in El Segundo was surprised by a number of unusual phenomena.
+These included the following (as I recall... it's been a while since I
+heard the story):
+
+-  Tape drives would rewind and dismount their tapes in the middle of a
+   job.
+
+-  Disk drives would seek back&amp;forth so rapidly that they'd attempt to
+   walk across the floor.
+
+-  The card-punch output device would occasionally start up of itself
+   and punch a "lace card" (every hole punched).  These would usually
+   jam in the punch.
+
+-  The console would print snide and insulting messages from Robin Hood
+   to Friar Tuck, or vice versa.
+
+-  The Xerox card reader had two output stackers;  it could be
+   instructed to stack into A, stack into B, or stack into A unless a
+   card was unreadable, in which case the bad card was placed into
+   stacker B.  One of the patches installed by the ghosts added some
+   code to the card-reader driver... after reading a card, it would flip
+   over to the opposite stacker.  As a result, card decks would divide
+   themselves in half when they were read, leaving the operator to
+   recollate them manually.
+
+I believe that there were some other effects produced, as well.
+
+Naturally, the operator called in the operating-system developers.  They
+found the bandit ghost jobs running, and X'ed them... and were once
+again surprised.  When Robin Hood was X'ed, the following sequence of
+events took place:
+
+  !X id1
+
+  id1:   Friar Tuck... I am under attack!  Pray save me!  (Robin Hood)
+  id1: Off (aborted)
+
+  id2: Fear not, friend Robin!  I shall rout the Sheriff of Nottingham's men!
+
+  id3: Thank you, my good fellow! (Robin)
+
+Each ghost-job would detect the fact that the other had been killed, and
+would start a new copy of the recently-slain program within a few
+milliseconds.  The only way to kill both ghosts was to kill them
+simultaneously (very difficult) or to deliberately crash the system.
+
+Finally, the system programmers did the latter... only to find that the
+bandits appeared once again when the system rebooted!  It turned out
+that these two programs had patched the boot-time image (the /vmunix
+file, in Unix terms) and had added themselves to the list of programs
+that were to be started at boot time...
+
+The Robin Hood and Friar Tuck ghosts were finally eradicated when the
+system staff rebooted the system from a clean boot-tape and reinstalled
+the monitor.  Not long thereafter, Xerox released a patch for this
+problem.
+
+I believe that Xerox filed a complaint with Motorola's management about
+the merry-prankster actions of the two employees in question.  To the
+best of my knowledge, no serious disciplinary action was taken against
+either of these guys.
+
+Several years later, both of the perpetrators were hired by Honeywell,
+which had purchased the rights to CP-V after Xerox pulled out of the
+mainframe business.  Both of them made serious and substantial
+contributions to the Honeywell CP-6 operating system development effort.
+Robin Hood (Dan Holle) did much of the development of the PL-6
+system-programming language compiler; Friar Tuck (John Gabler) was one
+of the chief communications-software gurus for several years.  They're
+both alive and well, and living in LA (Dan) and Orange County (John).
+Both are among the more brilliant people I've had the pleasure of
+working with.
+
+Disclaimers: it has been quite a while since I heard the details of how
+this all went down, so some of the details above are almost certainly
+wrong.  I shared an apartment with John Gabler for several years, and he
+was my Best Man when I married back in '86... so I'm somewhat
+predisposed to believe his version of the events that occurred.
+
+Dave Platt
+  Coherent Thought Inc.  3350 West Bayshore #205  Palo Alto CA 94303
+
+--
+Edited by Brad Templeton.  MAIL, yes MAIL your jokes to funny@looking.UUCP
+Attribute the joke's source if at all possible.  I will reply, mailers willing.
+Remember: If you POST your joke instead of mailing it, I will not reply.
+
+                                    =*=
+
+So, Desperado, remember, circulating copyrighted material without
+permission may be bad, but trashing people's worlds, in howver amusing a
+fashion, is much worse.  Have a nice dream.
+
+Tom Parmenter
+
+                                    xxx
+</pre>
+</body>
+</html>

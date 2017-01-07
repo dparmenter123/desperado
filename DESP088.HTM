@@ -1,0 +1,624 @@
+<html>
+<title>#1071: A Pod Descending to Earth</title>
+<body>
+<pre>
+From:   KERMIT::PARMENTER  "Tom Parmenter  13-Dec-1983 1406"   13-DEC-1983 17:01
+To:     @DESPERADO
+Subj:   #1071: A Pod Descending to Earth
+
+ @.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$
+
+ DESPERADO, Some cats got it and some cats ain't
+
+ @.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$
+
+                     IT'S A BIG NET, YOU BET
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Save this one.  It explains the relationship of the Engineering net to
+the rest of the world, and, in particular, how to communicate with the
+ARPAnet.
+
+Then there are two other contributions on network life from
+CASTOR::COVERT.  John Covert and ALIEN::PHILPOTT (Rob) are the
+technical support team for Desperado.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: CASTOR::COVERT  "John Covert  07-Dec-1983 1656"
+To:   PARMENTER
+Subject: It's a small, small world
+
+Networks...
+
+Many of you may know that the ENET now has over 1600 nodes...
+(and it's growing by an average of about ten nodes per week)
+
+But that's not the full extent of the reachable world.  We have
+connections of various types to a few other networks:
+
+1. ARPANET (and other networks connected to it by the INTERNET protocol)
+   This network is a lot like DECNET, i.e., it can be used not only for
+   sending mail and files around, but also for creating real-time con-
+   nections between cooperating programs.  ARPANET is operated by the
+   Defense Department Advanced Reasearch Projects Agency and intercon-
+   nects, via the INTERNET protocol with MILNET (the military side of
+   ARPAnet) and several networks at universities and major corporations.
+   With a little bit of work (which might get done for Phase V), DECNET
+   could run the INTERNET protocol.
+
+2. USENET (a loose collection of Unix (mostly) systems)
+   This network is really not a network.  It is used for sending mail
+   and for sending files.  A connection in this network is done by
+   dialing (usually) into a terminal port on another system, logging
+   in as an interactive user, and then activating a file transfer
+   program.  Mail is a special format file.
+
+3. Public Packet Networks (X.25)
+   These are transport mechanisms which can be used by any network
+   type as a transport layer or for direct program-to-program commun-
+   ication.  Some of the links within the ENET are X.25 links (which
+   means that each bit transferred over the link costs money) -- this
+   is known as data-link mapping (the data link is mapped into a DECNET
+   link).  When this is the case, you can't tell that X.25 is involved.
+   There is also a version of MAIL available allowing you to specify a
+   DTE number (the logical equivalent of a telephone number) instead of
+   a node name.  This version of mail then establishes an X.25 call to
+   another VMS system which must be running the same version of MAIL,
+   and delivers mail using the mail protocol.  We haven't released this
+   outside the company yet, but we may do this, and/or incorporate it
+   into the Message Router, allowing Mail to be sent anywhere, using
+   National Bureau of Standards or ISO Mail protocols.
+
+Now, you ask, how do I use this?
+
+1. ARPANET (and the rest of Internet) is connected to DEC via a TOPS-20
+   system in Marlboro.  This system, however, does not presently oper-
+   ate as an automatic mail gateway -- our gateway is on node RHEA in
+   Palo Alto.  The gateway actually is into the USENET, and this gateway
+   uses one of two machines, one at Stanford and the other at Berkeley,
+   to forward messages into the ARPAnet.
+
+   To send to someone on the ARPAnet, you should specify the address
+   as follows:
+
+        RHEA::DECWRL::"covert@mit-mc.ARPA"
+
+   This will send to user Covert at the MIT PDP-10 MIT-MC.
+
+   RSX nodes can make the following kind of definition in their MAILNODE
+   file for commonly used nodes:
+
+        MIT-MC RHEA::DECWRL::"&lt;&gt;@mit-mc.ARPA"
+
+   which permits sending to MIT-MC::COVERT.  We also have ARPA defined
+   on our nodes as ARPA RHEA::DECWRL::"&lt;&gt;.ARPA" which permits sending
+   to any node as ARPA::user@node.  VMS does not yet have this kind of
+   translation capability.
+
+   Many INTERNET nodes have gateways into other networks.  For example,
+   there is a DECNET network linking Columbia University, Case-Western
+   Reserve University, and Carnegie-Mellon.  I can send to CMCCTD::USER
+   and have it translated to RHEA::DECWRL::"USER%CMCCTD@CUCS20.ARPA".
+
+   This message reaches the user by travelling on our network to Palo
+   Alto, entering the ARPA net at either Stanford or Berkeley, traversing
+   the ARPA net to Columbia University in Manhattan, and then travelling
+   as a TOPS-20 mail message over DECNET back to Pittsburgh.
+
+   Many INTERNET users can reply to us as well.  Whether it works or
+   not will depend primarily on the Mail program at their site.  Mail
+   to us should be addressed as follows:
+
+        "decwrl!rhea!enetnode!user"@BERKELEY  (or @SU-SHASTA).
+
+   The Berkeley mailer seems to be more tolerant of the way many mailers
+   format messages than the Stanford mailer.
+
+   *********************************************************************
+   AN IMPORTANT WARNING:  The ARPAnet is operated by BB&amp;N under contract
+   to the Defense Communications Agency.  Don't do anything stupid, or
+   we could lose our connection, and you could be in a heap of trouble.
+   *********************************************************************
+
+2. USENET doesn't have the kind of automatic routing that DECNET and
+   INTERNET have.  Each USENET site agrees to call various nodes from
+   time to time and transmit mail.  There's sort of a gentleman's
+   agreement that I'll pay for the phone costs to transmit your mes-
+   sages if you'll pay the costs to transmit mine.
+
+   To send to someone on USENET you have to know the path to take to
+   reach him.  There are certain key nodes which most people know how
+   to reach.  UCBVAX (the USENET name for the ARPA node BERKELEY),
+   DECVAX (in Merrimack) and DECWRL are among the key nodes, so you
+   should always find the shortest path to/from one of these.
+
+   For example, to send to someone on the machine yale-comix, you
+   address your message:  RHEA::DECWRL::"decvax!yale-comix!user".
+   A user on yale-comix addresses you as decvax!decwrl!rhea!enetnode!user.
+
+   In correspondence you can specify your address as:
+
+        {ucbvax,decvax}!decwrl!rhea!enetnode!user
+
+   This is the syntax used to tell people that they should send to either
+   ucbvax or decvax, then decwrl, etc.
+
+3. Public Packet Networks can be reached by X.25 interfaces on various
+   nodes.  Since the owners of those nodes are paying for any usage,
+   I won't list any of them here -- you should find them and discuss
+   your usage requirements.  This is only marginally useful now, since
+   most sites that this could be used to are on (or are about to be on)
+   the ENET anyway.  But it will be more useful in the future.
+
+   You send out by sending to the node which has the X.25 circuit,
+   followed by the DTE address of the destination node or gateway,
+   and then an address with respect to that gateway.  As a totally
+   hypothetical example, assume that there were a gateway on node
+   PORTAL, and that you wanted to send to a user on node XYZZY in
+   the network reachable by DTE address 1234567790.
+
+   You send to PORTAL::1234567890::XYZZY::user.  He replies (assuming
+   his gateway is on node TELCOM and your DTE address is 9876543210)
+   by sending to TELCOM::9876543210::YOURND::YOU.
+
+                                =*=
+
+From: CASTOR::COVERT  "John Covert  07-Dec-1983 1714"
+To:   PARMENTER
+Subject: Chased around the world by a stream of bits.
+
+Just got back from travelling around the net.
+
+Almost three weeks ago, as I was packing my bags, the familiar
+beeps of a few new mail messages called to me from the terminal
+connecter via DTN into the Enet.
+
+The first was a message from a friend on the MILnet at SAC in Omaha
+wishing me a good trip and telling me that his secretary was envious
+of my travel plans after reading the copy of my itinerary I'd sent
+him over the net.
+
+The second was from a friend at Apollo, sent to me over the Usenet.
+We had been doing some timing experiments to see how long it took
+to get messages back and forth through the Usenet, which stores
+messages at intermediate hops.
+
+The third was from one of the people I'd be meeting at Telecom 83
+the next day, using a node on the local area net in our booth at the
+show connected via the Swiss PTT's packet net into our net.
+
+After making arrangements to meet him at our booth the next day, I
+routed my mail to the DBN node I would be using to access the net
+for the week in Geneva.
+
+One of the exhibitors at the show, MCI, is expanding their network
+to be a world-wide network.  They've also bought WUI (the inter-
+national part of Western Union) and are getting into the data network
+business.  I used a line in their network to access my MCI mail account.
+Later, I would use a modem on a machine back home in our network,
+reached via "Set Host" to dial out into AT&amp;T's 800 Service network
+to access MCI Mail.
+
+At the end of the week in Geneva I had CASTOR reroute my mail to
+the node in the Easinet I would be using during my week in Munich.
+The DBN node had no mail forwarding services, so while I was in
+Munich I occasionally received messages on the DBN node.  But using
+the net, I was still able to read them.
+
+I was in Munich to study the requirements for connecting to the
+German public circuit switched data network.  Fortunately, we seem
+to do a good job of meeting these requirements.  We'll probably
+use circuits in this network to connect demo machines at DECUS into
+the net.
+
+At the end of that week, I moved my mail reception point to an Enet
+node at DECeast.  Here I was meeting with the people who will be
+responsible for adapting TMS to European telephone networks.  One
+of the problems here is that telephone dials don't always send the
+same number of pulses for the same digit.  The Norwegian network uses
+two methods within the same country; they have to translate between
+switching machines inside and outside Oslo.
+
+I needed the details, and got them over the phone, but wasn't sure
+I'd gotten the right answer, since the person I talked to in Norway
+was absolutely flabbergasted by my request, but after thinking about
+it realized that there was something different about the phones.
+
+Fortunately I received confirmation from someone in the Norwegian
+Telecom Administration, who sent me net mail from a VAX running Unix
+at the NTA research center via the Arpanet.
+
+It's a wonderful net, folks.  Using it, you can be at home away from
+home.  I responded to most of my mail the same day I received it.
+Some of my correspondents didn't even realize they were communicating
+with someone who was 5000 miles away.  This interconnection of all
+our networks will proceed even further over the next few years.
+
+E Pluribus Unum.  Now I'm back home on my node in the Enet.
+
+                                =*=
+
+From: CASTOR::COVERT  "John Covert  05-Dec-1983 1617"
+To:   PARMENTER
+Subject: Somebody might find out that we're all Desperados!
+
+From: Bibbero.PMSDMKT
+Subject: Big Brother and Block Modeling, Warning
+
+The New York Times (Nov 20, Sunday Business Section) carries a warning
+from two Yale professors against a new management technique that can
+be misused to snoop on personnel through sophisticted mathematical
+analysis of communications, including computer network usage.
+
+Professors Scott Boorman, a Yale sociologist, and Paul Levitt,
+research mathematician at Yale and Harvard (economics) who authored
+the article also invented the technique some years ago.  Briefly, it
+consists of computer-intensive analysis of personnel communications to
+divide them into groups or "blocks" depending on who they communicate
+with, whom they copy on messages, who they phone and who's calls don't
+they return.
+
+Blocks of people so identified can be classified as dissidents,
+potential traitors or "Young Turks" about to split off their own
+company, company loyalists, promotion candidates and so forth.
+"Guilt by association" is built into the system since members of the
+same block may not even know each other but merely copy the same person
+on memos.
+
+The existence of an informal organization as a powerful directing
+force in corporations, over and above the formal organization chart,
+has been recognized for a long time.  The block analysis method
+permits and "x-ray" penetration of these informal organizations
+through use of computer on-line analysis which may act, per the
+authors, as "judge and jury."
+
+The increasing usage of electronic mail, voice storage and forward
+systems, local networks and the like make clandestine automation of
+this kind of snooping simple, powerful, and almost inevitable.  The
+authors cite as misusage evidence the high degree of interest in the
+method by iron curtain government agencies.
+
+An early success (late 60's) was also demonstrated in a Catholic
+monastery where it averted organizational collapse by identifying
+members as loyalists, "Young Turks," and outcasts.  Currently,
+interest is high in U.S. corporations, particularily the internal
+audit departments seeking to identify dissidents.
+
+As the authors warn, this revolution in computers and information
+systems bring us closer to George Orwell's state of Oceania.
+
+                                =*=
+
+                       BROKEN IN NEXT RELEASE
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: PHILPOTT     "ROB PHILPOTT ZKO1-3/H01 DTN 264-8257"
+To:   KERMIT::PARMENTER
+
+On VMS V4, you can no longer say "FILE TT:" to dump mail in order to see
+escape sequences, etc.  This will create a folder named "TT:".  However,
+you may now use the new MAIL command "EXTRACT TT:", which will give the
+desired effect.
+
+                                =*=
+
+                     BROKEN IN LAST RELEASE
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+From: VORTEX::HYDRA::MIDDLETON    "John Middleton"
+To:   KERMIT::PARMENTER
+
+        Spoonerism &lt; W.A. Spooner (1844-1930), English clergyman.
+
+                                                        John
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Arrrghhh!!!  I knew that!
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: VOGON::GOODENOUGH   "Jeff Goodenough, IPG, Basingstoke"
+To:   KERMIT::PARMENTER
+
+Oh come on!  Spooner a U.S. major??  Much as I enjoyed the contribution on
+Spoonerisms, the original Spooner was a master at a famous English public
+[=private U.S.] school, Rugby I think.  One of his most famous -isms was
+uttered when he punished a pupil for "fighting a liar in the quad" [quad
+abb. quadrangle = smart name for school playground].
+
+Whilst on the subject of English as she is massacred, I think the terms
+"input throughput" and "output throughput" elsewhere in this issue, qualify
+for a major award in some category.
+
+                                =*=
+
+                          NOVEAU-UBIQUITY
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: NEMO::CAPTAIN
+To:   PARMENTER
+Subject: wordly skills
+
+How come there are so many high-tech billboards?  According to Mass High Tech
+two reasons emerged in an interview with the head of a billboard company:
+
+        1. They're cheap.
+
+        2. "The other reason has to do with the noveau-ubiquity of technology
+            products.  'Twenty years ago there really wasn't much to sell
+            except cigarets and cars,' says the billboard executive."
+
+A high-tech company, by the way, is defined by the Mass High Tech Council
+as a firm that spends more than 5 per cent of its annual sales revenue on
+R&amp;D.
+
+                                =*=
+
+                 IF IT DON'T STINK, DON'T STIR IT
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: EAYV01::MAXWELL      "Steve Maxwell , Business Engineering , Ayr"
+To:   KERMIT::T_PARMENTER
+Subject: DND Emergency
+
+        Does anyone know if this is -
+
+        1)   an April 1st joke just reaching Scotland ??????
+
+        2)   our System Manager being very sneaky
+
+        3)   TRUE !!???
+
+From:   STEVEB       "Steve Barrell, Ayr.  823.3209"    5-DEC-1983 16:09
+To:     MAXWELL
+Subj:   DND ( Dungeon )
+
+Could you please remove the reference to DND ( Dungeon ) in your LOGIN.COM ?
+
+I've just had a memo from the States that says we must not have the DND
+program on any machines, nor any references to it.
+
+If you happen to know of any versions of DND anywhere ( even renamed
+versions ! ), i would like to know.
+
+Thanx !
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+I'd say the chance of Dungeon (DND, Zork, whatever) disappearing
+entirely from all DEC machines is close to 0 (zero).  As I heard it,
+some pseudoconscientious dope (from Merrimack?) asked a company lawyer
+if it was legal and natch the lawyer said it wasn't and the dope
+started hassling everybody to get rid of their copies of the game.  A
+little judicious renaming of files and tasks should stop this madness.
+The game is out of the bottle, and has been for five years, and it
+won't get back in.  The RSTS Professional magazine gives away color
+maps of the Dungeon as a promo.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                        STICK IT UP YOUR BUMPER
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: DOSADI::BINDER       "Crazy Eddie"
+To:   KERMIT::T_PARMENTER
+
+On garbage trucks, eh?  In sunny Fort Lauderdale, all the Southern Sanitation
+trucks bear the following three items:
+
+1.  On the sides of the box, or whatever-it-is, "FREE SNOW REMOVAL"
+
+2.  Also on the sides of the box, "WE CATER WEDDINGS"
+
+3.  On the back, above the gaping maw, "WARNING - THIS TRUCK HAS BAD BREATH"
+
+- Dick
+
+                                =*=
+
+From: BABEL::SALMAN       "Jim Salman     DTN 381-2035"
+To:   KERMIT::PARMENTER
+
+Here's a license plate I saw on Route 2 going into Cambridge.  I don't
+know if it means anything or if the car owner simply wanted an easy-to-
+remember license plate:
+
+                XXXXXX
+
+Also, a bumper sticker I saw a few days ago:
+
+                CAMPING IS IN TENTS
+
+                                =*=
+
+From: ERLANG::DRL "Dave Lyons HLO2-3/C09 dtn: 225-5935"
+To:   KERMIT::PARMENTER
+
+YET MORE PLATES
+
+        ON A LeCar:  L'AUTO
+        On a LOTUS:  JACCT      (same as SETPRV on a VAX)
+        On a VW:     CTCH22
+        On a VW:     IGOFST
+        On a MB:     DEC DOC
+        On a van:    JRST       ( a PDP10 instruction )
+        On his other car:
+                     JFCL       ( yet another )
+        On a VW Camper:
+                     PDP TEN
+        On my ex office mate's car:
+                     +RSTS+
+
+And bumper stickers:
+
+        Seen on a British race car:
+                Paul Revere was a snitch
+
+                                =*=
+
+From: BEING::WATTERS      "bright moments"
+To:   KERMIT::PARMENTER
+
+I saw a curious looking plate last week on Rte 3.  It said:
+
+                        A2U
+
+I puzzled over it a few seconds and decided that it was just too
+cryptic for me.  Then, as I passed the car, I saw the plate in my rear
+view mirrow.  Nice idea, don't you think?
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+What else works out for mirror images?
+
+        A ==&gt; A         E ==&gt; 3         H ==&gt; H
+        I ==&gt; I         M ==&gt;  M        O ==&gt; O
+        S ==&gt; 2         T ==&gt;  T        U ==&gt; U
+        V ==&gt; V         W ==&gt;  W        X ==&gt; X
+        Y ==&gt; Y         Z ==&gt; 5         1 ==&gt; I
+        2 ==&gt; S         3 ==&gt; E         5 ==&gt; Z
+        8 ==&gt; 8         0 ==&gt; 0
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: VORTEX::KRYPTN::TS1::GENTRY "Martin Gentry"
+To:   KERMIT::PARMENTER
+
+Seen on a (random) car in Connecticut:
+
+                                        XQQQME
+
+                                =*=
+
+From: RABBIT::WARD
+To:   KERMIT::PARMENTER
+
+William Steig (the cartoonist) wrote and illustrated a book called
+CDB! , which uses only numbers and letters to create fairly complex
+phrases.  He was not constrained by the number of characters allowed
+on a license plate; hence came up with such exhortations as
+
+  [mother, telling child to eat breakfast]   M N X S L-T 4 U!
+
+Extending Steig's character set a bit by allowing the plus and minus
+signs, you can sing this one:
+
+          X-N-2-8 D +
+          L-M-N-8 D -
+
+My favorite, though, is:
+
+          I F A 10-10-C 2 B 1-10
+
+which is not in his book.
+
+Joyce
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Okay, Joyce!  That all goes back to the Abie stories, of which my
+favorite, including the elephants, goes something like this:
+
+        AB, C D LFN?
+        L! MNO LFN!
+        O S E R A LFN!
+        Z N NDN LFN R N FRKN LFN?
+        NDN LFN.
+
+And also more on ham and eggs:
+
+        F U NE X?
+        S, V F X?
+        F U NE M?
+        S, V F M.
+        L F M N X.
+
+The alphabet, as you see, has a Yiddish accent.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: VOGON::GOODENOUGH   "Jeff Goodenough, IPG, RYO-1/18"
+To:   KERMIT::PARMENTER
+
+A couple more from this side of the pond :
+
+        COM 1C          - on a Roller belonging to a well-known comedian
+
+        TEA 42          - one I saw quite a few years ago (before year
+                          letters)
+
+        FU 2            - belongs to a well-known lady in the entertainment
+                          business, who also used to write about her
+                          experiences in one of the men-only mags.
+                          (I actually spotted this one while driving in
+                          London once, though I knew the owner only from
+                          hearsay).
+
+                                =*=
+
+From: DVINCI::FISHER       "Burns Fisher, MRO3-1/E13, 231-4108"
+To:   KERMIT::PARMENTER
+
+Seen in an MRO3 parking lot:
+
+                IBM-QC
+
+Apparently the owner of said vehicle was a recent defector from Big Blue, and
+had not had time to change his/her plate, since beside the plate on the bumper
+was an "I &lt;heart&gt; Digital" sticker!
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+The following two messages are exactly in the order received.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Network Mail received on 29-Nov-83 at 11:21
+
+From: COGNAC::MALONEY
+To:   KERMIT::PARMENTER
+Subject: More vanity
+
+Vanity plate seen on a Fiat Turbo heading north:
+
+        EX DECI
+
+The driver was a bearded young gent wearing wire-rimmed glasses,
+so I assume he was indeed a former colleague.  An odd and negative
+way to describe oneself, eh?
+
+                                =*=
+
+Network Mail received on 29-Nov-83 at 14:13
+
+From: SUBA::JPAINTER     "The john painter"
+To:   KERMIT::PARMENTER
+Subject: License Plate
+
+The object of vanity plates is, of course, to be vain.  Therefore I submit
+for your approval (Rod Serling anyone?) the plate on my car.
+
+                X-DECI
+
+(only somewhat appropo. now )
+
+                                        John
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+John is now an ex-ex-Deci.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                             AFTERGLOW
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Of course, everyone knows that the SDC is giving free Cabbage Patch
+Kid dolls away tomorrow afternoon.  They have only 2000 dolls, so be
+sure to be there right after lunch.  Santa will be arriving at that
+time by helicopter with the dolls.
+
+Santa also has several hundred Adam computers to give away, including
+documentation and Russ Walter's phone number.  If you end up with an
+extra Adam, you might give it to Russ.  He's the Adam hotline, but he
+doesn't quite have his Adam yet.
+
+                                xxx
+</pre>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<html>
+<title>#17 Channel Grab, Op Sys, Playboy</title>
+<body>
+<pre>
+From:   DECPA::"desperado@world.std.com" "MAIL-11 Daemon" 22-MAR-1995 20:43:42.96
+To:     desperado@world.std.com
+Subj:   #17 Channel Grab, Op Sys, Playboy
+
+ LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+  Mail majordomo@world.std.com with [un]subscribe desperado in message body
+ LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+ 563-some lines
+ $&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.
+
+ DESPERADO, The possibilities of permutation border on the infinite
+
+ $&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.@$&gt;.
+
+                      ME AND MY OPERATING SYSTEMS
+
+ When I studied MACRO-11, they put me down in front of a bare-bones
+ PDP-11 and handed me many twirls of yellow tape, "the loader", "the
+ Sunnyvale editor", my "program".  I toggled in a bootstrap address,
+ watched the blinks and then loaded "the loader" and loaded my
+ "program" which didn't run, then loaded "the loader" again to load
+ "the Sunnyvale editor" whose mysterious operations I no longer
+ recall, then again with "the loader" to load my "program" which
+ blinked a light or two and shut down.  Since I had just been hired to
+ write about operating systems I asked the instructor innocently, "So,
+ where's the operating system in all this?"  "It's in your lap.  It's
+ right there in your lap."
+
+ Since then, I've been involved as a user and more on RSX systems,
+ Unix, the Symbolic Lisp Machine, and now (alas) DOS and Windows, and
+ us PC people are geting screwed.  Thus, the following reminiscences.
+
+ RSX (Dave Cutler's first big production) was a real-time system that
+ ran real nice on anybody's PDP-11 and was popular for program
+ development.  It had a full set of tools for operating the computer,
+ three or four text editors, not to mention editors for object files
+ and even task images, a neat viewer where you could see exactly what
+ was going on in memory, every possible parameter was there to be
+ tweaked because of the variety of machines it ran on and devices
+ supported.  This thing was documented, in stupefying, but consistent,
+ detail, in about 35 books.  It had a simple well-behaved
+ file-management program and directory structure.  It could support a
+ huge amount of memory (PDP-11 style memory), but it retained most of
+ its fundamental capacity in systems with 28K of memory.  It provided
+ a nice array of tools for getting it to do exactly what you wanted.
+ I once did a chart for RSX doc that I wanted to call "There must be
+ 50 ways to spool your output".  In my own involvement, I actually
+ fantasized taking this creature of the real-time lab out into the
+ mass market (which actually happened in a small way).  I'm sure it
+ was laughable, but it's where I broke in and got my first idea of
+ what an operating system was going to do for me, run my programs,
+ store and delete my files, keep things orderly and stay out of the
+ way, provide a reasonable means to automate and customize its
+ operations.
+
+ VMS, another Cutler system, was much like RSX.  (In fact, in its
+ first release it *was* RSX.)  VMS has everything, and more, once
+ again, documented, interfaced, interlocked and interlaced, ready for
+ its user to make of it what she will.  Certainly VMS is both stuffy
+ and a sprawling hog and could never by any stretch of the imagination
+ travel far from "the machine room", but, again, for the kind of
+ things most of us want out of our computers -- running programs,
+ managing files, setting up an environment the way we like, editing,
+ doing mail, doing newsgroups (that is, VAX Notes), printing files and
+ so forth, logging in on other systems, all the things we do on our
+ PCs are markedly easier to do on VMS than they are on the PC.
+
+ So, given this DEC background of square operating systems, where the
+ three letters after the dot in a filespec actually meant something
+ and did something, I've made my share of fun of Unix.  Still, I've
+ been using Unix myself lately while exploring the job market and
+ I'll have to say that it has sort of won me over.  I love the
+ feeling that just below the placid exterior of the system prompt an
+ entire world of seething software waits and all I have to do is toss
+ the right mixture of monkey claws and flash powder at the prompt and
+ demons will arise to do my bidding, to my growing horror, my *exact*
+ bidding.
+
+ You'd could make a hell of an operating system out of Unix.  I
+ wonder why nothing's ever come of it.  Unix is really made right,
+ like it should be. C is everywhere and can fix every problem (except
+ in the kingdom of Emacs where Lisp maintains its sway).  Unix is so
+ much of what I want an operating system to be, alert, reliable (in
+ my modest demand zone), flexible, brainy, even lovable, so why is it
+ such a drag?  Why hasn't more come of it?  Why does Unix remain
+ untamed?  Why, in all these years, with all that creativity, has no
+ common set of simple commands emerged? Type, Dir, Copy, Append,
+ Delete, Print, Find, Whatever.  I'm as charmed by Unset Noclobber as
+ I can be and I love the way none of the Emacs documentation ever
+ deigns to mention the arrow keys: "C-p, C-n, C-f, C-p were good
+ enough for my granddad and they're good enough for me.  You might
+ have to run Unix on an oscilloscope some day so stay away from those
+ wimpy arrow keys."
+
+ Why has no one taken this marvelous bag of tricks and hit the big
+ time with it?  Surely, with the power of awk and sed, not to mention
+ those slaphappy pipes, you could solve just about any problem under
+ the sun with Unix, and yet Unix remains in the shadows, where it was
+ born with the curse of unlimited potential.  I speak in ignorance
+ here.  I know that the original NeXt windows system ran on Unix and,
+ of course, X (bulimic gesture), but how come there's not a homely
+ little command language shell on every Unix system?  But no, once
+ you've sipped the waters of this anti-Nepenthe you're cursed forever
+ to suffer the brutality of manpages and Berkeley, Bourne and System
+ V, not to mention shell commands documented in three separate
+ alphabetical lists.  Unix is the most fabulous Erector set ever made,
+ but nobody ever stops to make a ferris wheel, they just keep making
+ more Erector set parts.  When Unix people feel really creative, they
+ make knockoffs of Unix and Emacs.  Linux, Ultrix, OSF, GNU . . .
+
+ Dennis Ritchie wrote an absolute *flame* foreword to "The Collected
+ Unix-Haters Mail", jeering, "The systems you remember so fondly
+ (TOPS-20, ITS, Multics, Lisp Machine, Cedar/Mesa, the Dorado) are
+ not just out to pasture, they are fertilizing it from below."  And,
+ in a second s2t-based trope:  "Your book is a pudding stuffed with
+ apposite observations, many well-conceived.  Like excrement, it
+ contains enough undigested nuggets of nutrition to sustain life for
+ some.  But it is not a tasty pie:  it reeks too much of contempt and
+ of envy."
+
+ I've already said I'm not a Unix hater, but you'd think, almost,
+ that he doth sound a little . . . could it be?  . . . guilty here.
+
+ The Symbolics Lisp Machine was a much nicer place to live than Unix
+ could ever be.  For the, how many can it been, five or six thousand
+ people in the world who ever had the pleasure, there has never been a
+ better "operating system".  Instead of a rat's nest of icons and
+ "tiled" windows or a nasty little prompt accepting nasty little
+ commands, you had an infinite number of dynamic windows, each taking
+ up a full screen and each only a keystroke away from the others.  At
+ each window you could switch willy-nilly from a command line to a
+ menu any time you liked.  For every user action there was a command,
+ a key accelerator, a mouse click and a function you could run to do
+ what you wanted done.  Everything that you had ever done since
+ booting was maintained in a complex of histories, not just command
+ lines, but pathnames, arguments, God knows what, all semantically
+ distinguished so that it was impossible to give the system a wrong
+ value.  Across the bottom of the screen lay the mouse documentation
+ line, stating clearly what each of the mouse buttons would do if
+ you clicked at that moment.  When in doubt you could sort of wave
+ the mouse around looking for something you liked the looks of.  And,
+ in the background, as many as five varieties of garbage collectors
+ chewing away like rats or benign bacteria at all the debris in
+ memory.  For a casual user, which I certainly was, you could stay up
+ a month or more at a time without having to reboot.
+
+ Did you see that, Bill Gates?  A month or two at a time.  On my PC,
+ I know that if I've just about got my environment where I want it
+ that the next thing that I do is likely to wedge the whole damn
+ show.  Whereupon I reboot, perhaps for the fourth or fifth time that
+ day.  Everything up to this point should be taken as an implicit
+ criticism of DOS and Windows.  From now on, it will be explicit.
+
+ Isn't it strange that I can reboot my PC by pressing CTRL/ALT/DELETE,
+ by flipping a switch on the front of the system box, or by turning
+ the surge protector off and on again?  And, each method of rebooting
+ produces *entirely* *different* *results*! And, instead of 50 ways to
+ spool my output, there is but one, find some program that can print
+ and print it from there.  Hello, Write, the little word processor
+ that could.
+
+ I don't believe for a minute that the various DOS prompts scattered
+ hopefully throughout Windows do the same thing as the real DOS
+ prompt.
+
+ I love having thirty-plus "program groups", most of them containing a
+ group consisting of one program (and all of them looking alike until
+ I bought a $13 accessory to allow me to change them).  Where there's
+ more than one member of a group, the others are usually improperly
+ integrated add-ons of some kind or lamebrained release notes
+ detailing the contortions you have to go through to get the programs
+ to run *after* they have been installed.  The logic by which a RUN
+ command is hard and this crap is easy escapes me.  And, of course, as
+ for removing programs, well, good luck.  And isn't it peachy to get a
+ chance to learn so much about serial ports and parallel ports and
+ interrupt request queues?  And, since these things are so important,
+ why can't I find out which programs are assigned to which ports and
+ IRQs?
+
+ And how about taking the same time and the same number of keystrokes
+ to do something a dozen times a day as it takes to do something you
+ might do once a year?  How come the last pathname I enter doesn't
+ stay there the until the next time I come back?  There's nothing
+ sticky or consistent about any behavior in DOS/Windows.  I went to
+ delete all my *.tmp files last week.  On a "hard-to-use professional
+ programmer's system", I'd have put together some kind of file mask,
+ done a DIR with the mask just to check what I was doing, and then
+ replaced the DIR with a DEL to do the job.  But on the PC I had to
+ pipe the output of the DIR to a file and then do a global search and
+ replace to stick a DEL in front of every filename to make a .BAT file
+ to do the job.  Indeed, I can't do any wildcarding at all in Windows
+ as far as I can see, not even with the wonderful little WizManager
+ Pro program that turns the Windows File Manager into something
+ remotely resembling a file manager and kicks the accursed Program
+ Manager out of bed for most purposes.  And why did I have to poke
+ through online shareware archives to get something (for which I
+ gladly paid $35 after evaluation) that should have been built into
+ the system in the first place?  And, furthermore, how come there
+ were 3.5 meg of .TMP files stashed away in a WINDOWS subdirectory?
+ Garbage garbage garbage.
+
+ Not the saddest words of tongue or pen, but pretty sad nonetheless,
+ are "Bob is an operating system built on top of Windows which is built
+ on top of DOS."  Why not just build up DOS?  It would appear that
+ Windows isn't much more than a piss-poor memory management extension
+ to DOS that's so hard to use that yet another "easy to use" system
+ (with a built-in phony smile) has to be slopped on top of it?  All of
+ this edifice is perched on top of a system designed fifteen years ago
+ to operate controllers.  So here we have bitter rivals, RSX, VMS,
+ Unix, and Lisp Machine, also built many years ago, each intended for
+ use by experts and each of them far easier to use, more forgiving,
+ more stable and more flexible than the only operating system 99 per
+ cent of all computer users have ever seen.
+
+ Many years ago, when Bill Gates was just a pup, he was written up by
+ the Wall Street Journal as a young programmer with a future.  "His
+ code is so tightly written", the Journal gushed, "that other
+ programmers are incapable of working on it."  A friend commented,
+ "That proves Gates has always been a better marketer than engineer,
+ even when he was just an engineer".  The OS/2 debacle is another
+ instance.
+
+ I dream of the day when all of us who have participated in the
+ operating system wars -- Unix-haters and Unix-lovers alike -- can
+ band together to build an operating system that will run on a PC,
+ providing a solid environment for running DOS and Windows programs
+ and yet still providing a straightforward, practical, well-documented
+ honest user experience.  Please, if the urge hits you to write one
+ more Unix, think, couldn't I do more for the world by killing DOS and
+ Windows?
+
+ PS -- This is odd, but I'd hardly spent more than a day or two on a
+ Mac when I started writing this, and I was glad I knew nothing,
+ because I did not want to write another Mac versus PC flame.  In the
+ middle or writing this, I started working on a Mac project, but I
+ assure you that had nothing to do with my views on DOS and Windows.
+
+                                   =*=
+
+From: jo@odi.com
+To: tompar@world.std.com
+Subject: [fwd: Girls of the Internet]
+
+It was only a matter of time, eh?
+
+&lt;fwds removed&gt;
+
+------- Forwarded Message
+
+PLAYBOY IS TRAVELLING THE INFO HIGHWAY LOOKING FOR WOMEN FOR
+A SPECIAL "GIRLS OF THE INTERNET" PICTORIAL
+
+- ----
+
+Women interested in being considered for this feature should e-mail (as
+an "attachment") a recent full-length body photo in a two-piece bathing
+suit or less and a clear face shot to: photo@playboy.com (Attn: Net Girls)
+
+No scanner?  Snail mail the photos to:
+
+   Playboy Magazine (Attn: Net Girls)
+   680 N. Lake Shore Drive
+   Chicago, IL. 60611
+
+Please include the following information:
+
+   NAME
+   E-MAIL ADDRESS
+   SNAIL-MAIL ADDRESS
+   PHONE
+   HEIGHT
+   WEIGHT
+   MEASUREMENTS
+   AGE
+   FAVORITE INTERNET SITES
+   ABOUT YOU
+
+All participants must be at least 18 years of age. So please provide us with
+two I. D.'s (one photo I.D.) that show your date of birth.
+
+Photography by Richard Fegley
+
+Copyright &amp;copy; 1995 Playboy Enterprises, Inc.
+
+From: britain@emunix.emich.edu (Brit -- It's Grim Up North.)
+Subject: Groucho
+To: tompar@world.std.com
+Date: Thu, 9 Mar 95 11:21:46 EDT
+Didnt-I-Dream: You Dreamed About Me
+What-It-Says-On-My-License-Plate: "BRITAIN"
+Chaos-Never-Died: You Just Got Organized
+X-Mailer: ELM [version 2.2 PL8]
+
+Groucho reported the case of Mrs. Story (the 'I love my husband' lady)
+in his book on the making of YBYL, "The Secret Word is Groucho."  I think,
+though, that he may have used the account of one of his staffers.  Perhaps
+the producers.  I forget.  But it did appear in the book, so if he denied
+it to LEonard Maltin he contradicted himself.
+
+        brit.
+--
+  Britain P. Woodman - britain@emunix.emich.edu | Eastern Michigan University
+        "And in O.J. Simpson news, the I-team's special investigative
+         unit reports from Anaheim that Tomorrowland is still fun, but
+                that Star Tours isn't all it's cracked up to be."
+LT Consultant / Asst. Music Director, WQBR Radio / Office of Campus Life Events
+
+                                   =*=
+
+From: Janet I Egan &lt;jegan@world.std.com&gt;
+Subject: Re: #14, lurching towards 15
+To: desperado@world.std.com
+
+Tom,
+
+A week or so ago a friend and I stopped by Cybersmith/Smitty's On-Line
+Cafe in Harvard Square intending to browse the web in congenial
+surroundings. We approached the cashier to buy access cards and were
+informed that the computer that issues the cards was down and even if we
+had cards, the card swipe on the PCs at the tables wouldn't read them.
+The manager sighed "Computers!" . My friend and I laughed out loud and
+left. Laughing all the way down the stairs past the display of ancient
+artifacts from the early days like Pong.
+
+Haven't been back since.
+Janet
+
+From jo@odi.com Thu Mar  9 19:04:25 1995
+Return-Path: &lt;jo@odi.com&gt;
+Date: Thu, 9 Mar 1995 13:02:27 -0500
+From: jo@odi.com
+Posted-Date: Thu, 9 Mar 1995 13:02:27 -0500
+Received-Date: Thu, 9 Mar 1995 13:02:27 -0500
+To: rom@harlequin.com, tompar@world.std.com, moon@cambridge.apple.com,
+        swm@harlequin.com
+Subject: [khs: oneAustralia sinking]
+
+Not bad.
+
+From: Kenneth H. Sinclair &lt;khs&gt;
+Date: Thu, 9 Mar 1995 12:49:30 -0500
+
+The Web URL "http://www.ac95.org/30/30_4_24.html#9" contains an
+unbelievable photo sequence and commentary of the sinking of
+oneAustralia, an America's cup contender that broke in two during a
+race last weekend.  Check it out.
+
+                                   =*=
+
+From: Roger.Goun@Eng.Sun.COM (Roger Goun)
+To: desperado@world.std.com
+Subject: Re: #14, lurching towards 15
+
+&gt; What about "variables" versus "volatile variables" and "constant
+&gt; variables"?
+
+One of my favorites is "regularly irregular", which I was taught to
+use to describe a heart rhythm that varies according to a discernable
+pattern.  My wife, for example, has a benign (so she claims) sinus
+arrhythmia.  Taking her pulse is a terrifying experience.
+
+                                                        -- Roger
+                                   =*=
+
+To: charla@charla.com, dlb@westernstar.com, cmz@westernstar.com,
+        dvv@westernstar.com, tompar@world.std.com
+From: tardiff@westernstar.com (Michael J. Tardiff)
+Subject: In the proper spirit of the Internet...
+                                              ________
++----------------------------------------+    \      /__
+| "THERE!  SIX LINES!                    |    |      |_ \
+|  Happy now, you *#&amp;%ing killjoys?!?"   |    |      |_||
+|  bren@interlog.com                     |    |      |__/
++----------------------------------------+    \______/
+
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                     NEW TWIST ON PUBLIC TV DEBATE
+
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+From: Peter Langston&lt;pud!psl@bellcore.bellcore.com&gt;
+To:Fun_People@bellcore.bellcore.com
+Subject: The *real* reason for the demise of PBS?
+
+From: rsadl@max.sosc.osshe.edu (Russell Sadler)
+
+[copyright 1995, Russll Sadler]
+
+I am enclosing a column I wrote a couple of weeks ago. I am a very
+mainstream, mass media journalist. For the last 25 years I have syndicated
+a daily radio and television commentary and a weekly newspaper column. The
+broadcasts are carried on 5 commercial television stations  and 6 radio
+stations in Oregon and Northern California. Two radio stations are public,
+the rest are commercial.  The column is carried in daily and weekly
+newspapers around Oregon.
+
+I think you will find this column is a different explanation for the
+new congressional leadership's effort to "defund" public broadcasting.
+
+*********Begin Column**********
+
+Rupert Murdoch, the Australian media baron, stupefied the media
+business when his Fox network outbid the venerable CBS for the rights to
+broadcast National Football League games this year. People in the television
+business knew Fox did not own enough stations in the top 50 media
+markets to charge enough  for commercials to recover the $1.6 billion
+Murdoch spent taking the NFL away from CBS. Rupert Murdoch is no fool with
+his money. The industry waited for Murdoch to drop the other shoe.
+
+There was less surprise when Murdoch announced his holding company
+paid $500 million for a 20 percent interest in the New World Communication
+Group, Inc. New World owns six television stations in the top 20 markets,
+four in the top 50 markets and two in the top 70, including stations in
+Dallas, the 8th largest market andDetroit, the 9th largest. Murdoch
+switched most of these stations from CBS affiliates to his Fox network. Now
+Murdoch had the means to charge more for commercials in the NFL games.
+Despite this brilliant high stakes entrepreneurship, Murdoch apparently
+lost $350 million in his $2.1 billion bid to build a national network.  He
+needs more stations in the largest television markets.
+
+There are no television frequencies available, especially the more
+lucrative VHF channels 2 - 13. They are licensed to ABC, CBS, NBC and Fox
+affiliates, a variety of independent stations and public television
+stations.
+
+Enter Big Bird and Barney, two of public television's artistic and
+financial success stories. The new Republican leadership began a campaign
+to convince the American people Big Bird and Barney and their "elitist"
+audience were responsible for the national debt.
+
+Government has no business doing what private enterprise can do
+better, chanted the ideologues. They do not explain why the vast wasteland
+of commercial television did not produce its own Big Bird and Barney
+instead of Teenage Mutant Ninja Turtles and Mighty Morphin Power Rangers.
+Sen. Larry Pressler, R-South Dakota and chair of the Senate Commerce
+Committee announced Bell Atlantic was prepared to take Big Bird and Barney
+off the government's hands and syndicate it to cable, satellite and
+television outlets. Americans could still enjoy Big Bird - for a fee, of
+course.
+
+There is a hollow, leaden ring to this heated, ideological
+rhetoric. Congress spends about as much on military bands as it spends on
+public broadcasting. Pressler comes from a sparsely populated state that
+has one of the largest public broadcasting audiences in the country. It
+can't be the money.  Pressler can't be reflecting the views of his
+constituents. Congress really isn't after the public broadcasting's liberal
+bias - real or imagined. It turns out the new congressional leadership
+wants the public broadcasting channels, especially in the top 50 markets.
+
+Public broadcasting licenses are owned by a variety of state and
+local governments, non-profit groups, colleges and universities. If the
+congress cuts public broadcasting funds and these stations are forced off
+the air, the government can reissue the licenses. Guess who is waiting in
+line.
+
+Shortly after Murdoch's Harper Collins publishing company offered
+House Speaker Newt Gingrich the controversial $4.5 million book deal,
+Murdoch and other broadcasters asked for and got closed door meetings with
+House Republicans and Pressler's Commerce Committee staff. No one knows for
+sure what went on in these "private" meetings but reporters for Newsday and
+Los Angeles Times columnist Lars-Erik Nelson believe turning public
+broadcasting channels over to private broadcasters was a topic of discussion.
+
+Bell Atlantic tried to make a deal with Murdoch last year for the
+20th Century Fox film library worth an estimated $4 billion. Murdoch wants
+to sell, apparently to raise cash to replace the money he is losing on the
+NFL. Bell Atlantic has cash from its telephone operations and wants the
+film library to supply its planned venture into home entertainment. The
+deal fell apart when Bell Atlantic decided it did not have enough broadcast
+outlets to pay the bill. Bell Atlantic executives met privately with
+Pressler to complain about the lack of broadcasting frequencies in major
+television markets. Privately, the new congressional leadership believes
+public broadcasting stands in the way of restructuring the new electronic
+media and the solution is just turn off the spigot that pays for Big Bird
+and Barney.
+
+The federal government holds a 13 year lien on any public
+broadcasting facility built with grants from the Corporation for Public
+Broadcasting. Those facilities include much of the modernized studio and
+transmission equipment in the largest markets and the extensive translator
+networks built by rural public stations like Jefferson Public Radio. If
+these stations cease broadcasting because of a lack of money, the federal
+government can just take over the property, issue the licenses to private
+operators and sell the lucrative studio and transmission facilities to
+their campaign contributors.
+
+There is a surprising reason for this intense interest in
+old-fashioned television stations in the age of cable, satellite
+transmission and optic fiber cables. Murdoch's satellite television
+service demonstrated a revolutionary transmission technology that
+compresses signals 8 to 1.
+
+Stripped of technobabble, that means within a
+decade it will be possible to transmit eight separate digital broadcast
+signals on television channels that can only transmit one now. If existing
+television stations can deliver 30 or more  channels of home enetertainment
+into the Top 150 American television markets, it will drastically
+alter the economics of the cable and telephone industries.
+
+Murdoch's compression technology will permit today's commercial and
+public television broadcasters - long dismissed as technological dinosaurs
+- - to compete with cable, telephone and satellite transmissions companies or
+even short-circuit their potentially lucrative market.
+
+Perhaps the bitter battle over Big Bird and Barney's future makes a
+bit more sense now.
+(ENDIT)
+
+Russell Sadler
+Southern Oregon State College
+519 South Mountain Avenue
+Department of Communication
+Ashland, OR 97520
+
+1250 Siskiyou Blvd.
+Ashland, OR 97520
+503-482-3959
+
+"Whatever hits the fan will not be distributed evenly."
+-Russell's Rule the Fourth
+
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+ Public broadcasting's stance in the debate over public broadcasting
+ has been pretty pathetic:  We hardly get any money from the
+ government and it's only 97 cents per person, so please don't take
+ our lifeblood away.  This piece puts a new slant on things at least.
+
+ We only spend 23 cents per person on brutal prison guards, $1.49 a
+ head propping up billionaire miners,
+
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+ Last ish should be catalogued as 16a instead of being a duplicately
+ numbered 16.  Maybe the guys down at Smitty's Cybersmith can help me
+ hammer out a numbering program.
+
+ Interesting developments on the archiving front, more news later,
+ but if you're interested in joining in a rather vast project of
+ network history, all dealing with pretty damn interesting material,
+ send me some mail.
+
+ Yr. bdy,
+ Tom Parmenter
+
+                                 xxx
+
+ Digital technology is the universal solvent of intellectual property rights
+
+                    Copyright 1995, Tom Parmenter
+
+                                [\|/]
+                                [/|\]
+</pre>
+</body>
+</html>

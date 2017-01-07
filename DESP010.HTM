@@ -1,0 +1,186 @@
+<html>
+<title>Trick or treat?</title>
+<body>
+<pre>
+From:   BABEL::ALIEN::PARMENTER      29-OCT-1982 17:48
+To:     BABEL::WILBUR::DIAZ  ! SENT TO @DESPERADO
+Subj:   Trick or treat?
+
+ @.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$
+
+ DESPERADO, Special Hallowe'en Frightener All-SPR Edition.  Boo!
+
+ @.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$@.&gt;$
+
+                                THREE RSX SPRS
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+These babies are all in the pipeline, but we don't necessarily know
+that they were sent.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                                DCL MEETS MCR
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+RSX DCL has an MCR command and MCR has a DCL command.  Each submits
+commands to the other CLI.  This is supposed to make things simpler for
+the user, but that depends on how simple the user is to start with.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+PROBLEM
+STATEMENT
+
+Under DCL, an indirect command file with the command
+
+        MCR DCL MCR DCL . . . MCR DCL
+
+where "MCR DCL" is repeated exactly ten times and the final "DCL" is
+followed by a space, will produce the following error:
+
+        AT. -- Spawn failure.  DSW = 98.
+
+RESPONSE
+
+This error message is the result of passing an overlong command line
+to the indirect command file processor.  Command lines are limited to
+79 characters.  A more explicit error message will be considered for a
+future release of RSX-11M.
+
+In terms of function, the following pair of indirect command files
+will perform the same function as the command file described in the
+problem statement without producing the error message:
+
+LOOP.CMD
+
+        .SETN COUNT 0
+.LOOP:  @MCRDCL
+        .INC COUNT
+        .IF COUNT &lt; 10. .GOTO LOOP
+        .EXIT
+
+MCRDCL.CMD
+
+        MCR DCL
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Just think of what he would have come up with if we'd been smart
+enough to put an MCR command in MCR and a DCL command in DCL just to
+complete the set.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                      JUST YOUR BASIC PROGRAMMER
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+This next SPR came from a notorious source of many SPRs and few bugs.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+PROBLEM
+STATEMENT
+
+The Executive dirctive ALUN$ works as documented when the LUN argument
+is an integer number.  When the LUN argument is given as an integer
+variable, it fails.  Since this is inconsistent with the behavior of
+other directives, a bug is suspected.
+
+RESPONSE
+
+There is an error in your sample program.  Shortly after calling the
+"RECEIV" routine you execute your call to ASNLUN without having
+initialized variable "ONE" to 1 if a packet was dequeued by your call
+to "RECEIV".  We suggest that you initialize your variables by using a
+data statement or certainly before you use them.
+
+Maintainer's note:  This is a perfect example of the sort of
+time-waster we detest which could easily be avoided.  If you think the
+Assign LUN directive doesn't work when given a variable, try it.
+Don't send us a seven-page program that has the problem imbedded in
+it.  Write a short example which uses only the minimum amount of code
+to generate the problem.  If you had done this, it would have worked.
+This would then lead you to suspect that it was your application which
+had the problem.  As it is, we wasted a significant amount of our most
+precious resource (developer time) tracking a problem which isn't
+covered by SPR service in the first place.
+
+                                =*=
+
+                        CAN'T ASSIGN A BB:
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Another one BOOts the dust.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+PROBLEM
+
+BOO ignores logical assigns for SY:
+
+RESPONSE
+
+Thank you for your SPR. You are quite correct. BOO ignores logical assigns
+for SY:. Also AA:, AB:, and 672 other two-character combinations.
+
+It does however, recongize logical assigns for LB:, which is the default
+device for BOOt, as documented on page 3-23 of the MCR Operations Manual.
+
+                                =*=
+
+                        THE TOPS-10 ONE
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Even though everyone has seen this one, I must send it again, just
+for the record.  I must.  What if you hadn't seen it?
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+This is a real answer to a TOPS-10 SPR:
+
+Thank you for your SPR.  The problem actually began with SPR
+30591  (see  15-Aug-81  Dispatch P3-63).  At one time it was
+believed that this problem would be solved by MCO 9623  (PCO
+10-701-104).   We  no  longer  believe this to be true.  MCO
+9623 does not solve this  problem,  and  the  MCO  has  been
+retracted.  The problem is, instead, corrected by MCO 10171.
+Nevertheless, the code published on 15-Aug-81  was  not  the
+correct  code for MCO 9623.  It was instead the code for MCO
+9652.  Note that MCO 9652 has since been superseded  by  MCO
+10038.
+
+When we realized what  had  happened,  we  immediately  took
+corrective   actions   (see   SPR  31870).   MCO  9623  (PCO
+10-701-104)  was  republished  in  the  15-Feb-82   Dispatch
+(P3-35).   Unfortunately,  the  code published was still not
+the correct code for MCO 9623.  It was instead a fragment of
+MCO 9465.  Moreover, the fragment was published incorrectly.
+
+MCO 9465 was distributed, in its correct form, as a DDT file
+to  be  used with the new release of RMS.  MCO 9465 was also
+published in the 15-Mar-82 Dispatch (P3-89).   However,  the
+code  was  not  labeled  correctly in that publication.  The
+code labeled as MCO 9464 is actually  MCO  9465.   The  code
+labeled  as  MCO  9465  is  actually  MCO  9464.  (i.e., PCO
+10-701-234 is MCO 9465 and PCO 10-701-235 is MCO 9464.)
+
+PCO 10-701-104  has  since  superseded  by  PCO  10-701-248.
+Unfortunately,  it still does not depict MCO 9623 correctly.
+It merely corrects the typo in  the  15-Feb-82  publication.
+Thus  PCO 10-701-248 is still merely a fragment of MCO 9465.
+Note  that  MCO  9465  (PCO  10-701-234)  has   since   been
+superseded by MCO 10133.
+
+In summary, the correct code for MCO  9623  has  never  been
+published.  Moreover, the MCO has been retracted.  If you've
+installed any of the code that purports to be  MCO  9623  we
+suggest that you remove it immediately.  If you've installed
+MCO 9465 (PCO 10-701-234) we  suggest  that  you  remove  it
+immediately  and  replace  it  with  MCO  10133.   If you've
+installed MCO 9652 we suggest that you remove it immediately
+and  replace it with MCO 10038.  If you are experiencing the
+original problem (TW hangs),  we  suggest  you  install  MCO
+10171.
+
+We apologize for all the confusion.
+
+                                xxx
+
+Fri 29-Oct-1982 17:47 TLZ
+</pre>
+</body>
+</html>
